@@ -1,3 +1,12 @@
+# Class description
+- `utils/JwtUtils` - Create JWT, validate them and read data from them.
+- `service/UserService` - Must implement UserDetailsService
+- `model/User` - Must implement UserDetails
+- `config/SecurityConfig` - enables the security module
+  - `filterChain()` - allows all urls to be publicly accessible (Use annotations like @Secured to protect the endpoints)
+- `config/PasswordEncoderBean` - creates the BCrypt password encoder
+- `config/JwtAuthFilter` - sets up the security to work with JWT
+
 # Endpoints
 - GET /user/hello - Unauthenticated endpoint, can be always accessed
 - POST /user/register {"username": "test", "password": "pw"} - create a new user with role student
